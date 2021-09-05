@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a song from your last day!">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="shared.css"/>
+    <title>Your Tempo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 id="title">Your Tempo</h1>
+    <div id="main">
+        <img src="pfp.png" id="pfp" align="left">
+        <div id="info">
+            (User's Name)'s Song
+        </div>
+        <br>
+        <audio id="audio">
+            <source src="anoyume.wav">
+        </audio>
+        <br>
+        <br>
+        <div id="controls">
+            <button type="button" onclick="playpause()" id="play" class="fa fa-play"></button>
+        </div>
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="volume">
+            <button type="button" onclick="volmute()" id="volmute" class="fa fa-volume-off"></button>
+            <button type="button" onclick="voldown()" id="voldown" class="fa fa-volume-down"></button>
+            <button type="button" onclick="volup()" id="volup" class="fa fa-volume-up"></button>
+        </div>
+        <br>
+        <span class="stats">Mood Generated: (insert mood)</span>
+        <br>
+        <span class="stats">Songs Used in Mashup: <span id="songs"></span></span>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

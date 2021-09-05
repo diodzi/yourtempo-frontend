@@ -1,0 +1,38 @@
+:root {
+    background-color: #1f1f1f;
+    font-family: 'Poppins', sans-serif;
+    --accent-color: #F04747;
+}
+
+::selection {
+    background: var(--accent-color);
+    color: rgb(235, 235, 235);
+}
+
+#title {
+    text-align: center;
+    color: rgb(235, 235, 235);
+    font-size: 5vw;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+}
+
+#main {
+    color: black;
+    background-color: rgb(235, 235, 235);
+    margin: auto;
+    width: 65%;
+    margin-top: 2vh;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    border-radius: 30px;
+    border: 3px solid;
+    border-color: var(--accent-color);
+    box-shadow: 0px 0px 50px var(--accent-color);
+}
+
+hr {
+    border: 0.3vh solid;
+    border-color: var(--accent-color);
+    margin-top: 8vh;
+}
