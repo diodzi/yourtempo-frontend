@@ -1,7 +1,11 @@
+/* everything in this css is fort the explanation site */
+
+/* additional styling for the white part of the site */
 #main {
     text-align: center;
 }
 
+/* styling for the header / title of the main section */
 h1 {
     font-size: 3vw;
 }

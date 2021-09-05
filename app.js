@@ -1,12 +1,13 @@
+// grabbing things from the html to use in the js
 const audio = document.getElementById("audio");
 const playbutton = document.getElementById("play");
-
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 
-
+// setting the default volume to 50%
 window.onload = () => {audio.volume = .5; console.log(audio.volume);};
 
+// play/pause button functionality
 let playpause = () => {
     if (playbutton.className == "fa fa-play") {
         audio.play();
@@ -17,6 +18,7 @@ let playpause = () => {
     }
 }
 
+// volume buttons functionality
 let volup = () => {
     audio.volume += .1;
     console.log(audio.volume);
@@ -32,15 +34,15 @@ let volmute = () => {
     console.log(audio.volume);
 }
 
-// Update progress bar
+// update the progress bar as the song goes on
 function updateProgress(e) {
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
 }
   
-  // Set progress bar
-  function setProgress(e) {
+// set the progress bar and song time when you click on a part of the bar
+function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
@@ -48,8 +50,8 @@ function updateProgress(e) {
     audio.currentTime = (clickX / width) * duration;
 }
 
-// Time/song update
+// updates the song time and progress bar
 audio.addEventListener('timeupdate', updateProgress);
 
-// Click on progress bar
+// checks for user clicking the bar
 progressContainer.addEventListener('click', setProgress);

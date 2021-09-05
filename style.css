@@ -1,3 +1,6 @@
+/* everything in this css is for the song page of the site only */
+
+/* the styling for the picture on the left of the main box */
 #pfp {
     border-radius: 30px;
     border: 5px solid;
@@ -7,6 +10,7 @@
     box-shadow: 0px 0px 5px black;
 }
 
+/* the styling for the title of the song */
 #info {
     display: inline;
     padding-left: 1vw;
@@ -14,17 +18,21 @@
     font-size: 3.5vw;
 }
 
+/* styling for the invisible audio object (?) idk why there's
+   styling applied but im gonna leave it in case it breaks something */
 #audio {
     padding-top: 1vh;
     padding-left: 1vw;
 }
 
+/* the play button styling */
 #controls {
     display: inline;
     margin-left: 1vw;
     margin-top: 13vh;
 }
 
+/* styling for every button when it's not being hovered */
 button {
     background-color: black;
     border: 3px solid;
@@ -40,6 +48,7 @@ button {
     transition-duration: 0.2s;
 }
 
+/* styling for every button when it's being hovered (glow) */
 button:hover {
     cursor: pointer;
     background-color: var(--accent-color);
@@ -48,10 +57,12 @@ button:hover {
     box-shadow: 0px 0px 10px var(--accent-color);
 }
 
+/* styling for the volume buttons */
 #volume {
     display: inline;
 }
 
+/* styling for the mood and song list section */
 .stats {
     display: inline-block;
     padding-top: 2vh;
@@ -60,6 +71,7 @@ button:hover {
     line-height: 1%;
 }
 
+/* styling for the container the progress bar goes through */
 .progress-container {
     background: black;
     border-radius: 5px;
@@ -71,6 +83,7 @@ button:hover {
     margin-right: 1vw;
 }
 
+/* styling for the progress bar */
 .progress {
     background-color: var(--accent-color);
     border-radius: 5px;

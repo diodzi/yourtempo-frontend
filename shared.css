@@ -1,14 +1,20 @@
+/* everything in this css is shared between both the song site
+   and the how it works site */
+
+/* declare all global variables here */
 :root {
     background-color: #1f1f1f;
     font-family: 'Poppins', sans-serif;
     --accent-color: #F04747;
 }
 
+/* changes the colour when you highlight over anything on the site */
 ::selection {
     background: var(--accent-color);
     color: rgb(235, 235, 235);
 }
 
+/* the big Your Tempo at the top of the page */
 #title {
     text-align: center;
     color: rgb(235, 235, 235);
@@ -17,6 +23,7 @@
     text-decoration-color: var(--accent-color);
 }
 
+/* the white part in the middle of the site with all the information */
 #main {
     color: black;
     background-color: rgb(235, 235, 235);
@@ -31,6 +38,7 @@
     box-shadow: 0px 0px 50px var(--accent-color);
 }
 
+/* obsolete, we no longer need any hr objects but if we need it again it's already styled */
 hr {
     border: 0.3vh solid;
     border-color: var(--accent-color);
