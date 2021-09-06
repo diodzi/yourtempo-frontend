@@ -2,12 +2,12 @@
 
 /* the styling for the picture on the left of the main box */
 #pfp {
-    border-radius: 30px;
-    border: 5px solid;
-    border-color: #1f1f1f;
+    /* border-radius: 30px; */
+    /* border: 5px solid; */
+    /* border-color: #1f1f1f; */
     margin-left: 2vw;
-    width: 15vw;
-    box-shadow: 0px 0px 5px black;
+    width: 13vw;
+    /* box-shadow: 0px 0px 5px black; */
 }
 
 /* the styling for the title of the song */
@@ -30,31 +30,6 @@
     display: inline;
     margin-left: 1vw;
     margin-top: 13vh;
-}
-
-/* styling for every button when it's not being hovered */
-button {
-    background-color: black;
-    border: 3px solid;
-    border-color: black;
-    color: rgb(235, 235, 235);
-    width: 4.5%;
-    padding-top: 1.5vh;
-    margin-right: 0.2vw;
-    padding-bottom: 1.5vh;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 15px;
-    transition-duration: 0.2s;
-}
-
-/* styling for every button when it's being hovered (glow) */
-button:hover {
-    cursor: pointer;
-    background-color: var(--accent-color);
-    border: 3px solid;
-    border-color: black;
-    box-shadow: 0px 0px 10px var(--accent-color);
 }
 
 /* styling for the volume buttons */
