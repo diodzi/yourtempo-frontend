@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css styling --> 
+    <link rel="stylesheet" href="./css/shared.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <!-- title -->
+    <title>your tempo</title>
+    <meta name="description" content="Create a song from your last day!">
+
+    <!-- google font and font awesome things to get correct font and icons for audio buttons --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 id="title">your tempo</h1>
+    <div id="main">
+        <img src="./imgs/sad.png" id="pfp" align="left">
+        <div id="info">
+            <!-- *this is where you need to inject the song title* --> 
+            things will get better :(
+        </div>
+        <br>
+        <audio id="audio">
+            <!-- this is where you need to inject the song audio -->
+            <source src="./music/sad.mp3">
+        </audio>
+        <br>
+        <br>
+        <div id="controls">
+            <!-- play button -->
+            <button type="button" onclick="playpause()" id="play" class="fa fa-play"></button>
+        </div>
+        <!-- the progress bar of the song -->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+        <!-- volume buttons -->
+        <div id="volume">
+            <button type="button" onclick="volmute()" id="volmute" class="fa fa-volume-off"></button>
+            <button type="button" onclick="voldown()" id="voldown" class="fa fa-volume-down"></button>
+            <button type="button" onclick="volup()" id="volup" class="fa fa-volume-up"></button>
+        </div>
+        <br>
+        <!-- this is where you need to inject the mood of the song -->
+        <span class="stats">mood detected: sadness</span>
+        <br>
+        <!-- this is where you need to inject what songs were used in the mashup -->
+        <span class="stats">songs used in mashup: Marvin's Room - Drake, Sad Song - We The Kings<span id="songs"></span></span>
+    </div>
+</body>
+<script src="./scripts/app.js"></script>
+</html>

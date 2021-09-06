@@ -4,57 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- css styling --> 
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="shared.css"/>
-
-    <!-- title -->
     <title>Your Tempo</title>
-    <meta name="description" content="Create a song from your last day!">
+    <meta name="description" content="Create a song from your last 100 messages!">
 
-    <!-- google font and font awesome things to get correct font and icons for audio buttons --> 
+    <link rel="stylesheet" href="./css/shared.css" />
+    <link rel="stylesheet" href="./css/keys.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1 id="title">Your Tempo</h1>
     <div id="main">
-        <img src="pfp.png" id="pfp" align="left">
-        <div id="info">
-            <!-- *this is where you need to inject the song title* --> 
-            (User's Name)'s Song
-        </div>
-        <br>
-        <audio id="audio">
-            <!-- this is where you need to inject the song audio -->
-            <source src="anoyume.wav">
-        </audio>
-        <br>
-        <br>
-        <div id="controls">
-            <!-- play button -->
-            <button type="button" onclick="playpause()" id="play" class="fa fa-play"></button>
-        </div>
-        <!-- the progress bar of the song -->
-        <div class="progress-container" id="progress-container">
-            <div class="progress" id="progress"></div>
-        </div>
-        <!-- volume buttons -->
-        <div id="volume">
-            <button type="button" onclick="volmute()" id="volmute" class="fa fa-volume-off"></button>
-            <button type="button" onclick="voldown()" id="voldown" class="fa fa-volume-down"></button>
-            <button type="button" onclick="volup()" id="volup" class="fa fa-volume-up"></button>
-        </div>
-        <br>
-        <!-- this is where you need to inject the mood of the song -->
-        <span class="stats">Mood Generated: (insert mood)</span>
-        <br>
-        <!-- this is where you need to inject what songs were used in the mashup -->
-        <span class="stats">Songs Used in Mashup: <span id="songs"></span></span>
+        <h1>Enter Your Key</h1>
+        <input type="text" name="key" id="key">
+        <button onclick="sendToSite()" id="goBtn">Go!</button>
     </div>
+    <script src="./scripts/keys.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
