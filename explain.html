@@ -23,7 +23,26 @@
     <div id="main">
         <h1>How it Works</h1>
         <!-- this is where you need to put how the fk the song algorithm works when clara finishes -->
-        <p>lmao i don't fucking know ask clara jaemin and ryan im just making it look nice</p>
+        <p>We created a discord bot (your tempo#1854) that the user interfaces with. When the user uses
+            the -tempo command, our bot runs a search through the last 100 messages sent in the channel the command
+            was performed in to find which of the 100 were sent by the user calling the bot. It then sends these messages to
+            a Firebase database. We have another bot running that checks when the database is updated. When it gets
+            triggered, it attempts to detect what mood those messages primarily convey. Using Tensorflow, we created a ML Model that detects the
+            mood in a text. A database with more than 40,000 messages was used. These texts were preprocessed using custom functions in order 
+            to deal with mentions, contractions, slang, etc. Then, the messages were tokenized and turned into numbers that the model 
+            could use. A sequential model with 4 layers were used. The most prevalent mood in the group of texts was used to decide 
+            the two songs that would be "interpolated" in our Magenta ML Models. Once the mood of the messages has been determined,
+            the second bot sends this mood back to the database, and the first bot (which the user contacted initially)
+            sends this key, along with a link to our website, back to the user. The user then copies the key and goes to our website,
+            where it prompts them to paste that key in and click the go button. Once the user clicks go, the key is then matched to one of
+            the songs we have generated, and it takes the user to a page that they can play the song in and view information about it.
+            Magenta is a AI based project that can generate music through code. It provides an environment where developers can train ML
+            models, and use these models to lengthen or create music. We used Magenta to first "interpolate" two songs in midi files.
+            This allowed the model to find similar melodies between the two songs. Then, we lengthened this segment and continued the song.
+            Now, the song was taking more shape, but it was still missing something. We used a drum ml model, which gave our songs a drum beat.
+            And finally, we humanized this drum beat using another ml model from Magenta. In the end, we were able to retrieve a unique, one-of-a-kind
+            music that had never been seen before. 
+        </p>
     </div>
 </body>
 </html>
