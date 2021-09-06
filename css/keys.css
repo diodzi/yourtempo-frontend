@@ -1,0 +1,25 @@
+#main {
+    text-align: center;
+}
+
+#main h1 {
+    font-size: 3vw;
+    line-height: 50%;
+}
+
+input {
+    padding: 1vh 1vw;
+    border: 3px solid;
+    border-radius: 15px;
+    transition: 0.2s;
+    background-color: var(--special-white);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px var(--accent-color);
+}
+
+input:hover {
+    box-shadow: 0px 0px 20px var(--accent-color);
+}
